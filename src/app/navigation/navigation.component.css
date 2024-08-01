@@ -1,0 +1,42 @@
+/* Styling for the navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the nav list */
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Styling for the nav items */
+  .nav-item {
+    list-style: none;
+  }
+  
+  /* Styling for the nav links */
+  .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  /* Styling for active nav links */
+  .nav-item a.active {
+    color: #ff7e5f;
+    border-bottom: 2px solid #ff7e5f;
+  }
+  
+  /* Hover effect for nav links */
+  .nav-item a:hover {
+    color: #ff7e5f;
+  }
+  

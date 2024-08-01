@@ -1,0 +1,48 @@
+/* General styling for the container */
+:host {
+    display: block;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling for the title */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the post card */
+  .post-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  /* Hover effect for the post card */
+  .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the post title */
+  .post-card h3 {
+    margin-top: 0;
+    color: #007BFF;
+  }
+  
+  /* Styling for the post body */
+  .post-card p {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Styling for the "no posts available" message */
+  p {
+    text-align: center;
+    color: #999;
+  }
+  
