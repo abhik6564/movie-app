@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private apiUrl = 'https://official-joke-api.appspot.com/random_joke';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getPosts(): Observable<any> {
+  getRandomJoke(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
 }

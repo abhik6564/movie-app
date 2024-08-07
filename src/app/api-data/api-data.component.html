@@ -1,12 +1,9 @@
-<h2>Posts</h2>
-<div *ngIf="posts && posts.length; else noPosts">
-  <div *ngFor="let post of posts" class="post-card">
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.body }}</p>
+<!-- api-data.component.html -->
+<div class="container">
+  <button class="btn" (click)="getNewJoke()">New Joke</button>
+  <div *ngIf="joke" class="joke-container">
+    <h2>{{ joke.setup }}</h2>
+    <p>{{ joke.punchline }}</p>
   </div>
 </div>
-<ng-template #noPosts>
-  <p>No posts available.</p>
-</ng-template>
-
 

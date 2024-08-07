@@ -1,32 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from '../services/api.service';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-api-data',
-  standalone: true,
-  imports: [CommonModule, HttpClientModule],
   templateUrl: './api-data.component.html',
-  styleUrls: ['./api-data.component.css']
+  styleUrls: ['./api-data.component.css'],
+  standalone: true,
+  imports: [FormsModule, CommonModule]
 })
 export class ApiDataComponent implements OnInit {
-  posts: any[] = [];
+  joke: any = {};
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getPosts().subscribe(data => {
-      console.log(data);
-      if (data && data.length) {
-        this.posts = data;
-      } else {
-        console.error('No posts in API response');
-      }
-    }, error => {
-      console.error('API call error:', error);
+    this.getNewJoke();
+  }
+
+  getNewJoke(): void {
+    this.apiService.getRandomJoke().subscribe(data => {
+      console.log('Joke data:', data);
+      this.joke = data;
     });
   }
 }
+
 
 
